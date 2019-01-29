@@ -1,0 +1,4 @@
+"git remote -v" -- will tell you where your origin branch is pointed to
+"git add filename" will add whatever file name you want uploaded as long as you are in the directory of the git repo
+"git commit -m 'your commit message'" will commit the changes
+"git push origin <branch_name>" will push changes to the branch specified, right now we only have master.
