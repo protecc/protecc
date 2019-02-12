@@ -1,0 +1,25 @@
+POTENTIAL CLASSES:
+-sensor(motion sensor, glass break sensor, carbon monoxide sensor)
+-camera(outdoor camera, indoor camera)
+-control panel
+-keypad
+-doorbell
+
+POTENTIAL ACTORS:
+-user
+-police
+-fire dept.
+-paramedics
+
+POTENTIAL ACTIONS:
+-arm
+-disarm
+-view camera feed
+-view videos
+-call 911
+
+POTENTIAL STATES:
+-armed
+-disarmed
+-sensor tripped
+-sensor not tripped
