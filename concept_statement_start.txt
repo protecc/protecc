@@ -1,0 +1,10 @@
+A home security system has a main access console that the owner can access
+from either their personal home system, mobile device via a mobile
+application, or using a web application account.
+
+The console connects to various security sensors such as motion sensors,
+locked door sensors, cameras, gas sensors, smoke detectors,
+ ... ***LOTS MORE POSSIBLE*** ... 
+
+The sensors send signals to the system which causes the appropriate result
+(ie. door unlocked notification, carbon monoxide warning, calling for help)

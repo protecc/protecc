@@ -28,4 +28,3 @@ USE CASES:
 -break in security
 -general surveillence (watch kids, cleaning staff, etc)
 -non-intruder hazards (fire, gas, flooding)
-- 
