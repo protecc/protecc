@@ -2,6 +2,7 @@ POTENTIAL CLASSES:
 -sensor(motion sensor, glass break sensor, carbon monoxide sensor)
 -camera(outdoor camera, indoor camera)
 -control panel
+-website (encryption from this too)
 -keypad
 -doorbell
 -electric locks
