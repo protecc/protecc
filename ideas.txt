@@ -4,6 +4,7 @@ POTENTIAL CLASSES:
 -control panel
 -keypad
 -doorbell
+-electric locks
 
 POTENTIAL ACTORS:
 -user
@@ -28,3 +29,4 @@ USE CASES:
 -break in security
 -general surveillence (watch kids, cleaning staff, etc)
 -non-intruder hazards (fire, gas, flooding)
+-lock down house (lock doors, windows)
