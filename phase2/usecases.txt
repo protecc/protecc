@@ -6,7 +6,7 @@ View Report - Hunter
 View Live Feed - Hunter
 Trigger Alarm - Grant
 Turn Off Alarm - Grant
-Arm System - Collins
-Disarm System - Collins
+Arm System - Collins Hess
+Disarm System - Collins Hess
 Adjust Settings - Brett
 Add to Report - Brett
