@@ -1,2 +1,0 @@
-change view report DSSD a bit (CC Ctrlr)
-change contact services DSSD a bit
