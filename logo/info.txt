@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+
+font name: Rajdhani-Medium
+font link: https://fonts.google.com/specimen/Rajdhani
+font author: Indian Type Foundry
+font author site: https://www.indiantypefoundry.com/
+
+icon designer: Ryan Spiering
+icon designer link: /Ryan-Spiering
+        
+{"bg":"#FAF1EE","icon-gradient-0":"#B82949","icon-gradient-1":"#E9B84C","font":"#2F1911"}
+      
