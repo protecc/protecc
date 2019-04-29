@@ -12,4 +12,8 @@ public abstract class Sensor {
    public abstract boolean detectIssue();
 
    public abstract void updateReport(String contents);
+   
+   public String getSerialID() {
+      return serialID;
+   }
 }
