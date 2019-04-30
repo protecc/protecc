@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class CommandCenter {
    public static void main(String[] args) {
       
+      private boolean status;
+      
       Scanner input = new Scanner(System.in);
 
       SensorList sensorList = new SensorList();
@@ -116,12 +118,24 @@ public class CommandCenter {
    public static void updateReport(ReportController reportController) {
       reportController.reportMenu();
    }
-   
-   //viewReport()
-   
-   //sensorRequest(serialID,request)
-   
-   //changeSetting(name,value)
-   
-   //viewSettings()
+
+   public static void viewReport() {
+      reportController.showReport();
+   }
+
+   public static Sensor sensorRequest(serialID,request) {
+      for (Sensor thisSensor : sensorArray) {
+         if (thisSensor.getSerialID == serialID) {
+            return thisSensor;  
+         }
+      }
+   }   
+
+   public static void changeSetting(name,value) {
+      settingsController.adjustSetting(name, value);
+   }  
+
+   public static void viewSettings() {
+      settingsController.showSettings;
+   }
 }
