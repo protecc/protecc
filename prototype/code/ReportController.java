@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ReportController {
-	private Report report;
+	private Report openReport;
 
 	public ReportController() {
 		report = new Report();
