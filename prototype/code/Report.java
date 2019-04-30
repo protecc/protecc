@@ -1,8 +1,10 @@
 public class Report {
    private String contents;
+   private int reportID;
    
    public Report() {
       contents = "";
+      reportID = 0;
    }
    
    public String getContents() {
@@ -12,4 +14,8 @@ public class Report {
    public void setContents(String newContents) {
       contents = newContents;
    }  
+   
+   public int getReportID() {
+      return reportID;
+   }
 }
