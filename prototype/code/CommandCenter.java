@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CommandCenter {
    public static void main(String[] args) {
       
-      private boolean status;
+      boolean status;
       
       Scanner input = new Scanner(System.in);
 
@@ -123,7 +123,7 @@ public class CommandCenter {
       reportController.showReport();
    }
 
-   public static Sensor sensorRequest(serialID,request) {
+   public static Sensor sensorRequest(String serialID, String request) {
       for (Sensor thisSensor : sensorArray) {
          if (thisSensor.getSerialID == serialID) {
             return thisSensor;  
@@ -131,11 +131,11 @@ public class CommandCenter {
       }
    }   
 
-   public static void changeSetting(name,value) {
+   public static void changeSetting(String name, int value) {
       settingsController.adjustSetting(name, value);
    }  
 
    public static void viewSettings() {
-      settingsController.showSettings;
+      settingsController.showSettings();
    }
 }
