@@ -42,12 +42,17 @@ public class CommandCenter {
                break;
             case "feed":
                //accesses feed
-               System.out.print("Enter a serial ID for a sensor to see its feed: ");
+               System.out.println("\nHere are the current sensors: ");
+               Sensor[] currentSensors = sensorList.getList();
+               for (Sensor sensor : currentSensors) {
+                  System.out.print("ID: " + sensor.getSerialID() + " type: " +sensor.getType() + "\n");
+               }
+               System.out.print("\nEnter a serial ID for a sensor to see its feed: ");
                serialID = input.nextLine();
                requestFeed(serialID, feed, sensorList);
                break;
             case "911":
-               System.out.println("Contacting emergency services..");
+               System.out.println("Contacting emergency service...");
                System.out.println("Help is on the way.");
                break;
             case "lockdown":

@@ -5,8 +5,8 @@ public class Camera extends Sensor {
    protected boolean issueDetected;
    protected boolean motionDetected;
 
-   public Camera(String inputSerialID, String type) {
-      super(inputSerialID, type);
+   public Camera(String serialID, String type) {
+      super(serialID, type);
       motionDetected = false;
    }
 
@@ -24,10 +24,6 @@ public class Camera extends Sensor {
    	// 
    }
    
-   public String getSerialID() {
-      return this.serialID;
-   }
-
    public boolean getIssueDetected() {
       return issueDetected;
    }

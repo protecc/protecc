@@ -36,6 +36,7 @@ public class SensorList {
             System.arraycopy(sensorList, 0, updatedList, 0, index);
             System.arraycopy(sensorList, index + 1, updatedList, index, sensorList.length - index - 1);
             System.out.println("Sensor removed");
+            sensorList = updatedList;
             return;
          }
          index += 1;
