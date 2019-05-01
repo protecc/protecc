@@ -59,12 +59,8 @@ public class CommandCenter {
                //initiates lockdown
                lockdown(locks, armingController);
                break;
-            case "alarm on":
+            case "alarm":
                //activates alarm
-               armingController.changeAlarmStatus();
-               break;
-            case "alarm off":
-               //deactivates alarm
                armingController.changeAlarmStatus();
                break;
             case "report":
@@ -108,7 +104,7 @@ public class CommandCenter {
       System.out.println("911 - Contacts your local emergency services.");
       System.out.println("lockdown - Initiates the lockdown sequence.");
       System.out.println("report - Access report controller commands.");
-      System.out.println("alarm on[off] - [de]activates the alarm.");
+      System.out.println("alarm - flips the alarm's status.");
       System.out.println("sensor add[remove] - initiates a sensor request.");
       System.out.println("sysem arm[disarm] - [dis]arms the system.");
       System.out.println("settings - accesses the system settings.");
