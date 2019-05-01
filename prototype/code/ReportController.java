@@ -4,7 +4,7 @@ public class ReportController {
 	private Report openReport;
 
 	public ReportController() {
-		report = new Report();
+		openReport = new Report();
 	}
 
 	public void reportMenu() {
@@ -23,14 +23,14 @@ public class ReportController {
          			help();
          			break;
          		case "show contents":
-         			contents = report.getContents();
+         			contents = openReport.getContents();
          			System.out.println("Report Contents:");
          			System.out.println(contents);
          			break;
          		case "change contents":
          			System.out.print("Enter new report contents: ");
          			contents = input.nextLine();
-         			report.setContents(contents);
+         			openReport.setContents(contents);
          			System.out.println("Contents of report have been changed.");
          			break;
          		case "exit":

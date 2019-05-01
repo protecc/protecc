@@ -7,51 +7,52 @@ public class SensorList {
       sensorList = new Sensor[0];
    }
    
-   public Sensor[] add(String serialID, String type, Sensor[] sensorArray) {
-      sensorArray = Arrays.copyOf(sensorArray, sensorArray.length + 1);
+   public void add(String serialID, String type) {
+      sensorList = Arrays.copyOf(sensorList, sensorList.length + 1);
       if (type.toLowerCase().equals("camera")) {
-         sensorArray[sensorArray.length - 1] = new Camera(serialID, type);
+         sensorList[sensorList.length - 1] = new Camera(serialID, type);
       }
       else if (type.toLowerCase().equals("gas detector")) {
-         sensorArray[sensorArray.length - 1] = new GasDetector(serialID, type);
+         sensorList[sensorList.length - 1] = new GasDetector(serialID, type);
       }
       else if (type.toLowerCase().equals("smoke detector")) {
-         sensorArray[sensorArray.length - 1] = new SmokeDetector(serialID, type);
+         sensorList[sensorList.length - 1] = new SmokeDetector(serialID, type);
       }
       else if (type.toLowerCase().equals("motion sensor")) {
-         sensorArray[sensorArray.length - 1] = new MotionSensor(serialID, type);
+         sensorList[sensorList.length - 1] = new MotionSensor(serialID, type);
       }
       else {
          System.out.println("Sensor " + type + " not supported. Please enter "
             + "either a Camera, Gas Detector, Smoke Detector, or Motion Sensor ");
       }
-      return sensorArray;
    }
    
-   public Sensor[] remove(String serialID, Sensor[] sensorArray) {
+   public void remove(String serialID) {
       int index = 0;
       
-      for (Sensor sensor : sensorArray) {
+      for (Sensor sensor : sensorList) {
          if (sensor.serialID.equals(serialID)) {
-            Sensor[] updatedList = new Sensor[sensorArray.length-1];
-            System.arraycopy(sensorArray, 0, updatedList, 0, index);
-            System.arraycopy(sensorArray, index + 1, updatedList, index, sensorArray.length - index - 1);
+            Sensor[] updatedList = new Sensor[sensorList.length-1];
+            System.arraycopy(sensorList, 0, updatedList, 0, index);
+            System.arraycopy(sensorList, index + 1, updatedList, index, sensorList.length - index - 1);
             System.out.println("Sensor removed");
-            return updatedList;
+            return;
          }
          index += 1;
       }
       System.out.println("Error - sensor not found.");
-      return sensorArray;
    }
    
-   public Sensor findSensor(String serialID, Sensor[] sensorArray) {
-      for (Sensor sensor : sensorArray) {
+   public Sensor getSensor(String serialID) {
+      for (Sensor sensor : sensorList) {
          if (sensor.serialID.equals(serialID)) {
             return sensor;
          }
       }
       return null;
    }
-   //METHOD TO INSTANTIATE SENSOR OBJECTS
+   
+   public Sensor[] getList() {
+      return sensorList;
+   }
 }
