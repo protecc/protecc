@@ -9,7 +9,7 @@ public class ReportList {
    
    public void add(String contents, int reportID) {
       reportList = Arrays.copyOf(reportList, reportList.length + 1);
-      reportList[sensorList.length - 1] = new Report(contents, reportID);
+      reportList[reportList.length - 1] = new Report(contents, reportID);
       System.out.println("Report " + reportID + " added.");
    }
    
