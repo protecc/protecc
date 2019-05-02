@@ -21,8 +21,7 @@ public class Camera extends Sensor {
    }
 
    public void updateReport(String contents, int newReportID) {
-   	ReportList list = new ReportList();
-      list.add(newContents, newReportID);
+   	
    }
    
    public boolean getIssueDetected() {
