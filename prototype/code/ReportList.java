@@ -17,7 +17,7 @@ public class ReportList {
       int index = 0;
       
       for (Report report : reportList) {
-         if (report.reportID == reportID)) {
+         if (report.reportID == reportID) {
             Report[] updatedList = new Report[reportList.length-1];
             System.arraycopy(reportList, 0, updatedList, 0, index);
             System.arraycopy(reportList, index + 1, updatedList, index, reportList.length - index - 1);
