@@ -8,7 +8,7 @@ public abstract class Sensor {
       this.serialID = serialID;
       issueDetected = false;
       status = true;
-      this.type = type;
+      type = type;
    }
    
    public abstract boolean detectIssue();
@@ -17,10 +17,6 @@ public abstract class Sensor {
    
    public String getSerialID() {
       return this.serialID;
-   }
-   
-   public String getType() {
-      return this.type;
    }
 
    public boolean getIssueDetected() {

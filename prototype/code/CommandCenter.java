@@ -1,19 +1,15 @@
 import java.util.Scanner;
 
 public class CommandCenter {
-
-   public static ReportController reportController = new ReportController();
-   public static SettingsController settingsController = new SettingsController();
-   public static SensorList sensorList = new SensorList();
-   
    public static void main(String[] args) {
-      
-      boolean status;
       
       Scanner input = new Scanner(System.in);
 
+      SensorList sensorList = new SensorList();
+      Sensor[] sensorArray = new Sensor[0];
       Feed feed = new Feed();
-
+      ReportController reportController = new ReportController();
+      SettingsController settingsController = new SettingsController();
       Locks locks = new Locks();
       Lock lock1 = new Lock();
       Lock lock2 = new Lock();
@@ -42,25 +38,22 @@ public class CommandCenter {
                break;
             case "feed":
                //accesses feed
-               System.out.println("\nHere are the current sensors: ");
-               Sensor[] currentSensors = sensorList.getList();
-               for (Sensor sensor : currentSensors) {
-                  System.out.print("ID: " + sensor.getSerialID() + " type: " +sensor.getType() + "\n");
-               }
-               System.out.print("\nEnter a serial ID for a sensor to see its feed: ");
+               System.out.print("Enter a serial ID for a sensor to see its feed: ");
                serialID = input.nextLine();
-               requestFeed(serialID, feed, sensorList);
+               requestFeed(serialID, sensorArray, feed, sensorList);
                break;
             case "911":
-               System.out.println("Contacting emergency service...");
-               System.out.println("Help is on the way.");
-               break;
+               //gets help
             case "lockdown":
                //initiates lockdown
                lockdown(locks, armingController);
                break;
-            case "alarm":
+            case "alarm on":
                //activates alarm
+               armingController.changeAlarmStatus();
+               break;
+            case "alarm off":
+               //deactivates alarm
                armingController.changeAlarmStatus();
                break;
             case "report":
@@ -73,12 +66,12 @@ public class CommandCenter {
                System.out.print("Please enter the type of sensor being added "
                   + "(Camera, Gas Detector, Smoke Detector, or Motion Sensor): ");
                String type = input.nextLine();
-               sensorList.add(serialID, type);
+               sensorArray = sensorList.add(serialID, type, sensorArray);
                break;
             case "sensor remove":
                System.out.print("Enter the serial ID of the sensor being removed: ");
                serialID = input.nextLine();
-               sensorList.remove(serialID);
+               sensorArray = sensorList.remove(serialID, sensorArray);
                break;
             case "system arm":
                armingController.arm();
@@ -104,15 +97,15 @@ public class CommandCenter {
       System.out.println("911 - Contacts your local emergency services.");
       System.out.println("lockdown - Initiates the lockdown sequence.");
       System.out.println("report - Access report controller commands.");
-      System.out.println("alarm - flips the alarm's status.");
+      System.out.println("alarm on[off] - [de]activates the alarm.");
       System.out.println("sensor add[remove] - initiates a sensor request.");
       System.out.println("sysem arm[disarm] - [dis]arms the system.");
       System.out.println("settings - accesses the system settings.");
       System.out.println("exit - log off system.\n");
    }
    
-   public static void requestFeed(String serialID, Feed feed, SensorList sensorList) {
-      String feedString = feed.showFeed(serialID, sensorList);
+   public static void requestFeed(String serialID, Sensor[] sensorArray, Feed feed, SensorList sensorList) {
+      String feedString = feed.showFeed(serialID, sensorArray, sensorList);
       System.out.println(feedString);
    }
 
@@ -123,21 +116,12 @@ public class CommandCenter {
    public static void updateReport(ReportController reportController) {
       reportController.reportMenu();
    }
-
-   public static Sensor sensorRequest(String serialID, String request) {
-      for (Sensor sensor : sensorList.getList()) {
-         if (sensor.getSerialID().equals(serialID)) {
-            return sensor;  
-         }
-      }
-      return null;
-   }   
-
-   public static void changeSetting(String name, int value) {
-      settingsController.adjustSettings(name, value);
-   }  
-
-   public static void viewSettings() {
-      settingsController.showSettings();
-   }
+   
+   //viewReport()
+   
+   //sensorRequest(serialID,request)
+   
+   //changeSetting(name,value)
+   
+   //viewSettings()
 }

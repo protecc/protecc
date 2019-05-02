@@ -21,6 +21,9 @@ public class GasDetector extends Sensor {
 		// 
 	}
    
+	public String getSerialID() {
+		return serialID;
+	}
 
 	public boolean getIssueDetected() {
 		return issueDetected;

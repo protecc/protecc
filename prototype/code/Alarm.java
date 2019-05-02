@@ -15,10 +15,5 @@ public class Alarm {
    
    public void setStatus(boolean newStatus) {
       status = newStatus;
-      if (status) {
-         System.out.println("Alarm activated.");
-      } else {
-         System.out.println("Deactivated alarm.");
-      }
    }
 }
