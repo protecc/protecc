@@ -23,4 +23,10 @@ public class Locks {
    public Lock[] getLocks() {
       return lockList;
    }
+   
+   public void lockAllLocks(Lock[] locklist) {
+      for (Lock lock: locklist) {
+            lock.lock();
+      }
+   }
 }
