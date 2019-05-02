@@ -18,4 +18,8 @@ public class Report {
    public int getReportID() {
       return reportID;
    }
+   
+   public void setReportId(int newReportID) {
+      reportID = newReportID;
+   }
 }
