@@ -13,11 +13,11 @@ public class ReportList {
       System.out.println("Report " + reportID + " added.");
    }
    
-   public void remove(String reportID) {
+   public void remove(int reportID) {
       int index = 0;
       
       for (Report report : reportList) {
-         if (sensor.reportID.equals(reportID)) {
+         if (report.reportID == reportID)) {
             Report[] updatedList = new Report[reportList.length-1];
             System.arraycopy(reportList, 0, updatedList, 0, index);
             System.arraycopy(reportList, index + 1, updatedList, index, reportList.length - index - 1);
@@ -30,9 +30,9 @@ public class ReportList {
       System.out.println("Error - report not found.");
    }
    
-   public Report getReport(String reportID) {
+   public Report getReport(int reportID) {
       for (Report report : reportList) {
-         if (report.reportID.equals(reportID)) {
+         if (report.reportID == reportID) {
             return report;
          }
       }
