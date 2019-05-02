@@ -15,7 +15,10 @@ public class SmokeDetector extends Sensor {
 	}
 
 	public void updateReport(String contents) {
-		// 
+		public void updateReport(String newContents) {
+   	ReportController reportController = new reportController;
+      reportController.changeContents(newContents);
+   }
 	}
 
 	public int getWaitTime() {
