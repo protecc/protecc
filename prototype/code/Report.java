@@ -6,6 +6,11 @@ public class Report {
       this.contents = contents;
       this.reportID = reportID;
    }
+
+   public Report() {
+      this.contents = "";
+      this.reportID = 0;
+   }
    
    public String getContents() {
       return contents;

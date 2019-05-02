@@ -5,7 +5,7 @@ public class ReportController {
 	Scanner input = new Scanner(System.in);
 
 	public ReportController() {
-		//openReport = new Report("", );
+		openReport = new Report();
 	}
 
 	public void reportMenu() {
