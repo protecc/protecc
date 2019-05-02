@@ -10,11 +10,12 @@ public class ReportController {
 	public void reportMenu() {
 		Scanner input = new Scanner(System.in);
 		String contents;
-
+		boolean menuChoice = true;
+		
 		System.out.println("Report Menu:");
 		System.out.println("Type \"help\" for commands.");
 
-		while (true) {
+		while (menuChoice) {
 			System.out.print(">>> ");
          	String command = input.nextLine();
 
@@ -35,6 +36,7 @@ public class ReportController {
          			break;
          		case "exit":
          			System.out.println("Type \"help\" for commands.");
+				menuChoice = false;
          			return;
          		default:
                		System.out.println("Invalid command. Type \"help\" for commands.");
@@ -44,8 +46,8 @@ public class ReportController {
 
 	public void help() {
 		System.out.println("\nCommands: ");
-		System.out.println("show contents - show contents of the report.");
-		System.out.println("change contents - change the contents of the report.");
-		System.out.println("exit - exit report menu.\n");
+		System.out.println("Show contents - show contents of the report.");
+		System.out.println("Change contents - change the contents of the report.");
+		System.out.println("Exit - exit report menu.\n");
 	}
 }
