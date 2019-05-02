@@ -21,7 +21,7 @@ public class Camera extends Sensor {
    }
 
    public void updateReport(String newContents) {
-   	ReportController reportController = new reportController;
+   	ReportController reportController = new ReportController();
       reportController.changeContents(newContents);
    }
    
