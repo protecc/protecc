@@ -2,9 +2,9 @@ public class Report {
    private String contents;
    private int reportID;
    
-   public Report() {
-      contents = "";
-      reportID = 0;
+   public Report(String newContents, newReportID) {
+      contents = newContents;
+      reportID = newReportID;
    }
    
    public String getContents() {
