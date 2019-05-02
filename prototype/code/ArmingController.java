@@ -21,7 +21,6 @@ public class ArmingController {
          System.out.println("Incorrect PIN.");
          return;
       }
-      
       houseAlarm.setStatus(!houseAlarm.getStatus());
    }
    

@@ -39,7 +39,7 @@ public class EmergencyController {
    
    public void getEmergencyContactInfo() {
       int userChoice;
-      System.out.println("Enter 1 for police, 2 for fire, 3 for emt.")
+      System.out.println("Enter 1 for police, 2 for fire, 3 for emt.");
       userChoice = input.nextInt();
       
       switch(userChoice) {
