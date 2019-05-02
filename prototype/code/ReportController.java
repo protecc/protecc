@@ -24,15 +24,10 @@ public class ReportController {
          			help();
          			break;
          		case "show contents":
-         			contents = openReport.getContents();
-         			System.out.println("Report Contents:");
-         			System.out.println(contents);
+         			showReport();
          			break;
          		case "change contents":
-         			System.out.print("Enter new report contents: ");
-         			contents = input.nextLine();
-         			openReport.setContents(contents);
-         			System.out.println("Contents of report have been changed.");
+         			changeContents();
          			break;
          		case "exit":
          			System.out.println("Type \"help\" for commands.");
@@ -42,6 +37,19 @@ public class ReportController {
                		System.out.println("Invalid command. Type \"help\" for commands.");
          	}
 		}
+	}
+	
+	public void showReport() {
+		contents = openReport.getContents();
+         	System.out.println("Report Contents:");
+        	System.out.println(contents);
+	}
+	
+	public void changeContents() {
+		System.out.print("Enter new report contents: ");
+         	contents = input.nextLine();
+         	openReport.setContents(contents);
+         	System.out.println("Contents of report have been changed.");
 	}
 
 	public void help() {
