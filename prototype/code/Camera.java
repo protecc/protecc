@@ -20,8 +20,9 @@ public class Camera extends Sensor {
       return motionDetected;
    }
 
-   public void updateReport(String contents, int newReportID) {
-   	
+   public void updateReport() {
+   	ReportController reportController = new reportController;
+      reportController.changeContents();
    }
    
    public boolean getIssueDetected() {
