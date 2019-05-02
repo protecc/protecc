@@ -107,7 +107,7 @@ public class CommandCenter {
       System.out.println("report - Access report controller commands.");
       System.out.println("alarm - flips the alarm's status.");
       System.out.println("sensor add[remove] - initiates a sensor request.");
-      System.out.println("sysem arm[disarm] - [dis]arms the system.");
+      System.out.println("system arm[disarm] - [dis]arms the system.");
       System.out.println("settings - accesses the system settings.");
       System.out.println("exit - log off system.\n");
    }
