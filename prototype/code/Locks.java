@@ -24,9 +24,4 @@ public class Locks {
       return lockList;
    }
    
-   public void lockAllLocks(Lock[] locklist) {
-      for (Lock lock: locklist) {
-            lock.lock();
-      }
-   }
 }
