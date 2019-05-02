@@ -17,9 +17,10 @@ public class GasDetector extends Sensor {
 		return issueDetected;
 	}
 
-	public void updateReport(String contents) {
-		// 
-	}
+	public void updateReport(String newContents) {
+   		ReportController reportController = new reportController;
+        	reportController.changeContents(newContents);
+   	}
    
 
 	public boolean getIssueDetected() {
