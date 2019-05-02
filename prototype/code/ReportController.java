@@ -28,7 +28,9 @@ public class ReportController {
          			showReport();
          			break;
          		case "change contents":
-         			changeContents();
+				System.out.print("Enter new report contents: ");
+         			String contents = input.nextLine();
+         			changeContents(contents);
          			break;
          		case "exit":
          			System.out.println("Type \"help\" for commands.");
@@ -41,15 +43,13 @@ public class ReportController {
 	}
 	
 	public void showReport() {
-			String contents = openReport.getContents();
+		String contents = openReport.getContents();
          	System.out.println("Report Contents:");
         	System.out.println(contents);
 	}
 	
-	public void changeContents() {
-		System.out.print("Enter new report contents: ");
-         	String contents = input.nextLine();
-         	openReport.setContents(contents);
+	public void changeContents(String newContents) {
+         	openReport.setContents(newContents);
          	System.out.println("Contents of report have been changed.");
 	}
 
