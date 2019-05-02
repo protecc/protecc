@@ -21,7 +21,7 @@ public class Camera extends Sensor {
    }
 
    public void updateReport(String contents) {
-   	// 
+   	System.out.println(contents)
    }
    
    public boolean getIssueDetected() {
