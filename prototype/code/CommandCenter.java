@@ -5,6 +5,7 @@ public class CommandCenter {
    public static ReportController reportController = new ReportController();
    public static SettingsController settingsController = new SettingsController();
    public static SensorList sensorList = new SensorList();
+   public static ReportList reportList = new ReportList();
    
    public static void main(String[] args) {
       
