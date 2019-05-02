@@ -14,12 +14,11 @@ public class SmokeDetector extends Sensor {
 		return issueDetected;
 	}
 
-	public void updateReport(String contents) {
-		public void updateReport(String newContents) {
-   	ReportController reportController = new reportController;
-      reportController.changeContents(newContents);
-   }
-	}
+	public void updateReport(String newContents) {
+   		ReportController reportController = new reportController;
+        	reportController.changeContents(newContents);
+   	}
+	
 
 	public int getWaitTime() {
 		return waitTime;
