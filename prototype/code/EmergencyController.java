@@ -33,11 +33,10 @@ public class EmergencyController {
       else {
         System.out.println("Invalid emergency number.");
       }
-      //how would we actually call for help?
    }
    
    
-   public void getEmergencyContactInfo() {
+   public String getEmergencyContactInfo() {
       int userChoice;
       System.out.println("Enter 1 for police, 2 for fire, 3 for emt.");
       userChoice = input.nextInt();
@@ -46,21 +45,23 @@ public class EmergencyController {
       
         case 1:
         return police;
-        break;
         
         case 2:
         return fire;
-        break;
         
         case 3:
         return emt;
-        break;
         
       }
+      return police;
    }
    
    public void verifySafety() {
-      //how to verify safety?
+      System.out.println("Are you okay? Enter yes or no.");
+      String userChoice = input.nextLine();
+      if (userChoice.equals("no")) {
+         System.out.println("Emergency Services have been notified.");
+      }
    }
    
    //set alarm
